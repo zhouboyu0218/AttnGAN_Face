@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#SBATCH --gres=gpu:1 --cpus-per-task=4 --mail-type=ALL
+
+. $HOME/anaconda3/etc/profile.d/conda.sh
+
+conda activate pytorch
+
+python pretrain_DAMSM.py --cfg cfg/DAMSM/face.yml 

@@ -1,0 +1,45 @@
+Using config:
+{'B_VALIDATION': False,
+ 'CONFIG_NAME': 'attn2',
+ 'CUDA': True,
+ 'DATASET_NAME': 'faces',
+ 'DATA_DIR': '../data/face_image',
+ 'GAN': {'B_ATTENTION': True,
+         'B_DCGAN': False,
+         'CONDITION_DIM': 100,
+         'DF_DIM': 64,
+         'GF_DIM': 32,
+         'R_NUM': 2,
+         'Z_DIM': 100},
+ 'GPU_ID': 0,
+ 'RNN_TYPE': 'LSTM',
+ 'TEXT': {'CAPTIONS_PER_IMAGE': 4, 'EMBEDDING_DIM': 256, 'WORDS_NUM': 18},
+ 'TRAIN': {'BATCH_SIZE': 22,
+           'B_NET_D': True,
+           'DISCRIMINATOR_LR': 0.0001,
+           'ENCODER_LR': 0.0002,
+           'FLAG': True,
+           'GENERATOR_LR': 0.0008,
+           'MAX_EPOCH': 150,
+           'NET_E': '../DAMSMencoders/face_image/text_encoder70.pth',
+           'NET_G': '../models/netG_epoch_150.pth',
+           'RNN_GRAD_CLIP': 0.25,
+           'SMOOTH': {'GAMMA1': 4.0,
+                      'GAMMA2': 5.0,
+                      'GAMMA3': 10.0,
+                      'LAMBDA': 5.0},
+           'SNAPSHOT_INTERVAL': 10},
+ 'TREE': {'BASE_SIZE': 64, 'BRANCH_NUM': 3},
+ 'WORKERS': 4}
+Load filenames from: ../data/face_image/train/filenames2.pickle (1000)
+Load from:  ../data/face_image/captions.pickle
+Load pretrained model from  https://download.pytorch.org/models/inception_v3_google-1a9a5a14.pth
+Load image encoder from: ../DAMSMencoders/face_image/image_encoder70.pth
+Load text encoder from: ../DAMSMencoders/face_image/text_encoder70.pth
+# of netsD 3
+Load G from:  ../models/netG_epoch_150.pth
+Load D from:  ../models/netD0.pth
+Load D from:  ../models/netD1.pth
+Load D from:  ../models/netD2.pth
+Save G/Ds models.
+Total time for training: 23.693983793258667
